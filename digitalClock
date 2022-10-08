@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang=“pt-br”>
+	<head>
+		<title>Meu relogio em Javascript</title>
+		<meta charset=“UTF-8”>
+		<script>
+		
+			function relogio(){
+				var data=new Date();
+				var horarios=data.getHours();
+				var minutos=data.getMinutes();
+				var segundos=data.getSeconds();
+				
+				if(horarios < 10){
+					horarios="0"+horarios;
+				}
+				if(minutos < 10){
+					minutos="0"+mininutos;
+				}
+				if(segundos < 10){
+					segundos="0"+segundos;
+				}
+				
+				var horas=horarios + ":" + minutos + ":" + segundos;
+				
+				document.getElementById("rel").value=horas;
+			}
+
+			var timer=setInterval(relogio,1000);
+
+		</script>
+	</head>
+	<body>
+<h1> ==CONFIRA AS HORAS== </h1>
+		<input type="text" id="rel">
+<h1> Meu Relógio Digital em HTML</h1>
+<h3> By Iraê C. Brandão </h3>
+	</body>
+</html>
